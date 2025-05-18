@@ -9,9 +9,9 @@ class DashBoardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AdaptiveLayout(
-          desktopLayout: (context) => SizedBox(),
+          desktopLayout: (context) => DashboardDesktopLayout(),
           mobileLayout: (context) => SizedBox(),
-          tabletLayout: (context) => DashboardDesktopLayout()),
+          tabletLayout: (context) => SizedBox()),
     );
   }
 }
