@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app/components/all_expenses_header.dart';
-import 'package:ui_app/components/all_expenses_item.dart';
-import 'package:ui_app/models/all_expnses_item_model.dart';
-import 'package:ui_app/utils/app_images.dart';
+import 'package:ui_app/components/all_expensive_items_list.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({
@@ -25,13 +23,7 @@ class AllExpenses extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          AllExpensesItem(
-            itemModel: AllExpnsesItemModel(
-                image: AppImages.imagesCardReceive,
-                title: 'Income',
-                date: 'May 2025',
-                price: r'$20,129'),
-          ),
+          AllExpensiveItemsListView(),
         ],
       ),
     );
