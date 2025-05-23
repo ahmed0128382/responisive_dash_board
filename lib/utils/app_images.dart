@@ -2,6 +2,11 @@
 class AppImages {
   AppImages._();
 
+  /// Assets for imagesCardBackgrounPng
+  /// assets/images/card_backgroun_png.png
+  static const String imagesCardBackgrounPng =
+      "assets/images/card_backgroun_png.png";
+
   /// Assets for imagesCardBackground
   /// assets/images/card_background.svg
   static const String imagesCardBackground =
