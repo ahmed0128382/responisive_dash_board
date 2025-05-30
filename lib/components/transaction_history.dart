@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app/components/transaction_history_header.dart';
+import 'package:ui_app/components/transaction_history_list_view.dart';
 import 'package:ui_app/utils/app_styles.dart';
 
 class TransactionHistory extends StatelessWidget {
@@ -7,22 +9,22 @@ class TransactionHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Transaction History',
-              style: AppStyles.styleSemiBold20,
-            ),
-            Text(
-              'see all',
-              style: AppStyles.styleMedium16.copyWith(
-                color: const Color(0xff4eb7f2),
-              ),
-            )
-          ],
-        )
+        TransactionHistoryHeader(),
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          '13 April 2025',
+          style: AppStyles.styleMedium16.copyWith(
+            color: const Color(0xffaaaaaa),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        TransactionHistoryListView(),
       ],
     );
   }
