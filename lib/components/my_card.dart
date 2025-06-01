@@ -41,10 +41,11 @@ class MyCard extends StatelessWidget {
               ),
               trailing: SvgPicture.asset(AppImages.imagesGallery),
             ),
-            const Expanded(child: SizedBox()),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 24.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     '0000 0000 0000 0000',

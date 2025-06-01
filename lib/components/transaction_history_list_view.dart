@@ -27,7 +27,8 @@ class TransactionHistoryListView extends StatelessWidget {
       shrinkWrap: true,
       itemCount: transactions.length,
       itemBuilder: (context, index) {
-        TransactionItem(transactionModel: transactions[index]);
+        return TransactionItem(transactionModel: transactions[index]);
+        //print(transactions[index]);
       },
     );
   }

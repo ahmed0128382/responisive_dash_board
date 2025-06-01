@@ -15,6 +15,8 @@ class TransactionItem extends StatelessWidget {
         ),
         child: ListTile(
           title: Text(
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             transactionModel.title,
             style: AppStyles.styleSemiBold16,
           ),

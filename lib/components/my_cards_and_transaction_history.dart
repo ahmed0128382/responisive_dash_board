@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app/components/custom_background_container.dart';
+import 'package:ui_app/components/income_section.dart';
 import 'package:ui_app/components/my_cards_section.dart';
 import 'package:ui_app/components/transaction_history.dart';
 

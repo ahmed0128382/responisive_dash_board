@@ -12,7 +12,10 @@ class MyCardsPageView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: List.generate(
         3,
-        (index) => MyCard(),
+        (index) => SizedBox(
+          height: 215, // Adjust according to your layout
+          child: MyCard(),
+        ),
       ),
     );
   }
