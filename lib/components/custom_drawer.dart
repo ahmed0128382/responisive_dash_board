@@ -16,39 +16,47 @@ class CustomDrawer extends StatelessWidget {
       color: Colors.white,
       child: CustomScrollView(
         slivers: [
+          /// User Info Tile
           SliverToBoxAdapter(
             child: UserInfoListTile(
               userInfoModel: UserInfoModel(
-                  image: AppImages.imagesFrame,
-                  title: 'Lekan Okeowo',
-                  subTitle: 'demo@gmail.com'),
+                image: AppImages.imagesFrame,
+                title: 'Lekan Okeowo',
+                subTitle: 'demo@gmail.com',
+              ),
             ),
           ),
-          SliverToBoxAdapter(
-            child: Spacer(
-                // height: 8,
-                ),
+
+          /// Optional spacing instead of Spacer
+          const SliverToBoxAdapter(
+            child: SizedBox(height: 8),
           ),
+
+          /// Drawer Items List
           DrawerItemsListView(),
+
+          /// Bottom Section with Settings & Logout
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Expanded(child: SizedBox()),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                      title: 'Setting system', image: AppImages.imagesSettings),
+                    title: 'Setting system',
+                    image: AppImages.imagesSettings,
+                  ),
                 ),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                      title: 'Logout Account', image: AppImages.imagesLogout),
+                    title: 'Logout Account',
+                    image: AppImages.imagesLogout,
+                  ),
                 ),
-                SizedBox(
-                  height: 12,
-                ),
+                const SizedBox(height: 12),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
