@@ -12,53 +12,56 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: CustomScrollView(
-        slivers: [
-          /// User Info Tile
-          SliverToBoxAdapter(
-            child: UserInfoListTile(
-              userInfoModel: UserInfoModel(
-                image: AppImages.imagesFrame,
-                title: 'Lekan Okeowo',
-                subTitle: 'demo@gmail.com',
+    return LayoutBuilder(builder: (context, constraints) {
+      return Container(
+        width: constraints.maxWidth * 0.7,
+        color: Colors.white,
+        child: CustomScrollView(
+          slivers: [
+            /// User Info Tile
+            SliverToBoxAdapter(
+              child: UserInfoListTile(
+                userInfoModel: UserInfoModel(
+                  image: AppImages.imagesFrame,
+                  title: 'Lekan Okeowo',
+                  subTitle: 'demo@gmail.com',
+                ),
               ),
             ),
-          ),
 
-          /// Optional spacing instead of Spacer
-          const SliverToBoxAdapter(
-            child: SizedBox(height: 8),
-          ),
-
-          /// Drawer Items List
-          DrawerItemsListView(),
-
-          /// Bottom Section with Settings & Logout
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Setting system',
-                    image: AppImages.imagesSettings,
-                  ),
-                ),
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Logout Account',
-                    image: AppImages.imagesLogout,
-                  ),
-                ),
-                const SizedBox(height: 12),
-              ],
+            /// Optional spacing instead of Spacer
+            const SliverToBoxAdapter(
+              child: SizedBox(height: 8),
             ),
-          ),
-        ],
-      ),
-    );
+
+            /// Drawer Items List
+            DrawerItemsListView(),
+
+            /// Bottom Section with Settings & Logout
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Setting system',
+                      image: AppImages.imagesSettings,
+                    ),
+                  ),
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Logout Account',
+                      image: AppImages.imagesLogout,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    });
   }
 }
