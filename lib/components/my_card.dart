@@ -9,7 +9,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio: 520 / 215,
       child: Container(
         decoration: ShapeDecoration(
           image: DecorationImage(
@@ -30,13 +30,13 @@ class MyCard extends StatelessWidget {
                 top: 16,
               ),
               title: Text(
-                'Name Card',
+                'Card name',
                 style: AppStyles.styleRegular16.copyWith(
                   color: Colors.white,
                 ),
               ),
               subtitle: const Text(
-                'Ahmed Ibrahim Abomousa',
+                'Ahmed Ibrahim',
                 style: AppStyles.styleMedium20,
               ),
               trailing: SvgPicture.asset(AppImages.imagesGallery),
@@ -50,18 +50,18 @@ class MyCard extends StatelessWidget {
                   Text(
                     '0000 0000 0000 0000',
                     style:
-                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                        AppStyles.styleSemiBold20.copyWith(color: Colors.white),
                   ),
                   Text(
                     '12/20 - 124',
                     style:
-                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                        AppStyles.styleSemiBold20.copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
             const SizedBox(
-              height: 54 - 28,
+              height: 44 - 28,
             ),
           ],
         ),

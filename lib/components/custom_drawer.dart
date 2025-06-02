@@ -25,9 +25,9 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: SizedBox(
-              height: 8,
-            ),
+            child: Spacer(
+                // height: 8,
+                ),
           ),
           DrawerItemsListView(),
           SliverFillRemaining(
@@ -44,7 +44,7 @@ class CustomDrawer extends StatelessWidget {
                       title: 'Logout Account', image: AppImages.imagesLogout),
                 ),
                 SizedBox(
-                  height: 48,
+                  height: 12,
                 ),
               ],
             ),
